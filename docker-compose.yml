@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  apod-service:
+    build:
+      context: ./src/apod
+    ports:
+      - "5002:5002"
+    env_file:
+      - .env  # This line specifies the path to the .env file
+
+  api-gateway:
+    build:
+      context: ./src/gateway
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env  # This line specifies the path to the .env file
+    depends_on:
+      - apod-service
