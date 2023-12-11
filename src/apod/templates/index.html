@@ -1,21 +1,29 @@
-<!-- templates/index.html -->
+<!-- templates/apod.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APOD Microservice Demo</title>
+    <title>Astronomy Picture of the Day</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Astronomy Picture of the Day</h1>
-    
+
+  <h1>Astronomy Picture of the Day</h1>
+
     <div id="apodContent">
-        <!-- Content will be dynamically populated here by Flask template -->
+        {% if apod_data.media_type == 'image' %}
+            <!-- Displaying an image -->
+            <img src="{{ apod_data.url }}" alt="{{ apod_data.title }}">
+        {% elif apod_data.media_type == 'video' %}
+            <!-- Displaying a YouTube video -->
+            <iframe width="800" height="600" src="{{ apod_data.url }}" frameborder="0" allowfullscreen></iframe>
+        {% endif %}
         <h2>{{ apod_data.title }}</h2>
-        <p><strong>Date:</strong> {{ apod_data.date }}</p>
-        <img src="{{ apod_data.url }}" alt="{{ apod_data.title }}">
         <p>{{ apod_data.explanation }}</p>
     </div>
+
 </body>
 </html>
+
