@@ -1,0 +1,28 @@
+/* static/style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;  /* Center the text */
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+#apodContent {
+    max-width: 800px;
+    margin: 40px auto;  /* Increase the margin to add more space */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+p {
+    line-height: 1.6;
+    color: #666;
+}
