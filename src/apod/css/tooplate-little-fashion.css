@@ -11,11 +11,11 @@ https://www.tooplate.com/view/2127-little-fashion
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --white-color:                #000000;
-  --primary-color:              #FF4400;
-  --section-bg-color:           #444692;
-  --dark-color:                 #000000;
-  --grey-color:                 #ffffff;
+  --white-color:                #0d0d0d;
+  --primary-color:              #7604d3;
+  --section-bg-color:           #8679d9;
+  --dark-color:                 #141a26;
+  --grey-color:                 #2e3d59;
   --p-color:                    #ffffff;
 
   --body-font-family:           'Inter', sans-serif;
