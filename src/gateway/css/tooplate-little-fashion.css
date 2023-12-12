@@ -61,6 +61,24 @@ body {
   text-align: center;
 }
 
+/* Optional styling for the button */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #7604d3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Optional hover effect */
+.button:hover {
+  background-color: #8679d9;
+}
 /*---------------------------------------
   TYPOGRAPHY               
 -----------------------------------------*/
