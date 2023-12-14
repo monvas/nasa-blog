@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 import requests
 import os
 
@@ -33,6 +33,11 @@ def get_apod():
         # Handle request errors
         return render_template("error.html", error=str(e)), 500
 
+
+@app.route('/')
+def redirect_to_home():
+    # Redirect the request to the gateway microservice
+    return redirect('http://127.0.0.1:8080')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5002)
