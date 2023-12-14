@@ -1,19 +1,15 @@
-# ./api-gateway/Dockerfile
-FROM python:3.8
+FROM python:3.10-slim-bullseye
+
+RUN apt-get update && apt-get install -y --no-install-recommends --no-install-suggests build-essential libpq-dev python3-dev && pip install --no-cache-dir --upgrade pip
 
 WORKDIR /app
+COPY ./requirements.txt /app
 
-# Copy only the requirements file to leverage Docker cache
-COPY requirements.txt .
+RUN pip install --no-cache-dir --requirement /app/requirements.txt
+COPY . /app
 
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Add a new line to copy static files
 
-# Copy the entire application
-COPY . .
-
-# Expose the port that the application will run on
 EXPOSE 8080
 
-# Command to run the application
 CMD ["python", "main.py"]

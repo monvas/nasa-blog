@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     # Your home page logic
-    return render_template('home.html')
+    return render_template('homepage.html')
 
 @app.route('/apod')
 def redirect_to_apod():
