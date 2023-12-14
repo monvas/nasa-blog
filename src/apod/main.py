@@ -12,6 +12,7 @@ import os
 
 NASA_API_KEY = os.environ.get('API_KEY')
 
+
 @app.route("/apod", methods=["GET"])
 def get_apod():
     # Construct the API request URL with the API key
