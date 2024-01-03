@@ -1,6 +1,30 @@
 version: '3'
 
 services:
+  mysql:
+    image: mysql:latest
+    container_name: my-mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    # command: 
+    #   - bash -c "chmod +r /docker-entrypoint-initdb.d/init.sql"
+
+  auth-service:
+    build:
+      context: ./src/auth
+    ports:
+      - "5001:5001"
+    depends_on:
+      - mysql
+    env_file:
+      - .env  # This line specifies the path to the .env file
+      
   apod-service:
     build:
       context: ./src/apod
