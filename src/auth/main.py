@@ -11,6 +11,8 @@ mysql_db = os.environ.get('MYSQL_DATABASE')
 
 app = Flask(__name__)
 
+app.secret_key = 'obkasbbindkawida'
+
 app.config['MYSQL_HOST'] = 'mysql' #mysql_host
 app.config['MYSQL_USER'] = mysql_user
 app.config['MYSQL_PASSWORD'] = mysql_pwd
@@ -35,7 +37,7 @@ def login():
 			session['email'] = account['email']
 			msg = 'Logged in successfully !'
 			print(msg)
-			return redirect('/')
+			return redirect('http://0.0.0.0:8080') #return redirect(url_for('home'))
 		else:
 			msg = 'Incorrect username / password !'
 	return render_template('sign-in.html', msg = msg)

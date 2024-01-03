@@ -52,7 +52,7 @@ https://www.tooplate.com/view/2127-little-fashion
 
                             <div class="row">
                                 <div class="col-lg-8 col-11 mx-auto">
-                                    <form action="/login" method="POST"> 
+                                    <form action="{{url_for('login')}}" method="POST"> 
                                     <!-- <form action="{{ url_for('login') }}" method="post"> -->
 
                                         <div class="form-floating mb-4 p-0">
@@ -70,8 +70,9 @@ https://www.tooplate.com/view/2127-little-fashion
                                             <label for="password">Password</label>
                                         </div>
 
-                                        <button type="submit" class="btn custom-btn form-control mt-4 mb-3" onclick="window.location.href='/'">
-                                            Sign in
+                                        <button type="submit" class="btn custom-btn form-control mt-4 mb-3">
+                                            <a href="{{url_for('home')}}">Sign In</a>
+                                            <!-- Sign in -->
                                         </button>
 
                                         <p class="text-center">Don’t have an account? <a href="{{url_for('register')}}">Create One</a></p>
