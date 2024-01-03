@@ -2,3 +2,4 @@
 .env
 src/.DS_Store
 .DS_Store
+/auth_env

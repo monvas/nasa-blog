@@ -7,11 +7,7 @@ app = Flask(__name__)
 # NASA APOD API endpoint
 NASA_APOD_API_URL = "https://api.nasa.gov/planetary/apod"
 
-# NASA API Key (Replace 'YOUR_API_KEY' with your actual API key)
-import os
-
 NASA_API_KEY = os.environ.get('API_KEY')
-
 
 @app.route("/apod", methods=["GET"])
 def get_apod():
