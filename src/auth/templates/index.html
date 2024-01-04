@@ -46,7 +46,7 @@
                     </a>
 
                     <div class="d-lg-none">
-                        <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                        <a href="http://localhost:5001/register" class="bi-person custom-icon me-3"></a>
                     </div>
 
                     <div class="collapse navbar-collapse" id="nvbarNav">
@@ -62,7 +62,7 @@
                         </ul>
 
                         <div class="d-none d-lg-block">
-                            <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                            <a href="http://localhost:5001/register" class="bi-person custom-icon me-3"></a>
 
                         </div>
                     </div>
@@ -84,7 +84,7 @@
                     <!-- Displaying a YouTube video -->
                     <iframe width="800" height="600" src="{{ apod_data.url }}" frameborder="0" allowfullscreen></iframe>
                 {% endif %}
-                <h2>{{ apod_data.title }}</h2>
+                <h2 class="text-primary">{{ apod_data.title }}</h2>
                 <p class="center-container">{{ apod_data.explanation }}</p>
             </div>
           </div>

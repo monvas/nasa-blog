@@ -161,6 +161,10 @@ a:hover {
   color: var(--white-color);
 }
 
+.list-of-items-button {
+  padding-bottom: 3cm;
+}
+
 /*---------------------------------------
   CUSTOM LINK               
 -----------------------------------------*/

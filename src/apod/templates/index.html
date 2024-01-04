@@ -46,7 +46,7 @@
                     </a>
 
                     <div class="d-lg-none">
-                        <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                        <a href="http://localhost:5001/register" class="bi-person custom-icon me-3"></a>
                     </div>
 
                     <div class="collapse navbar-collapse" id="nvbarNav">
@@ -59,10 +59,15 @@
                                 <a class="nav-link active" href="/apod">APOD</a>
                             </li>
 
+                            <li class="nav-item">
+                                <a class="nav-link" href="/earth_assets">Earth</a>
+                            </li>                            
+
+
                         </ul>
 
                         <div class="d-none d-lg-block">
-                            <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                            <a href="http://localhost:5001/register" class="bi-person custom-icon me-3"></a>
 
                         </div>
                     </div>
@@ -71,11 +76,11 @@
             <br><br><br><br>
 
 
-          <title>Astronomy Picture of the Day</title>
+          <title class="text-white">Astronomy Picture of the Day</title>
         </head>
         <body>
           <div class="center-container">
-            <h2 class="col-lg-6 col-12 header-info">Astronomy Picture of the Day</h2>
+            <h2 class="col-lg-6 col-12 header-info text-white">Astronomy Picture of the Day</h2>
             <div id="apodContent" class="img">
                 {% if apod_data.media_type == 'image' %}
                     <!-- Displaying an image -->
@@ -84,8 +89,9 @@
                     <!-- Displaying a YouTube video -->
                     <iframe width="800" height="600" src="{{ apod_data.url }}" frameborder="0" allowfullscreen></iframe>
                 {% endif %}
-                <h2>{{ apod_data.title }}</h2>
+                <h2 class="text-primary">{{ apod_data.title }}</h2>
                 <p class="center-container">{{ apod_data.explanation }}</p>
+                <br><br><br>
             </div>
           </div>
 
