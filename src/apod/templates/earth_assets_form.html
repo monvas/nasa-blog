@@ -78,27 +78,52 @@
             <title>Earth Imagery</title>
         </head>
         <body>
-            <h1>Request Earth Imagery</h1>
+            <section class="preloader">
+                <div class="spinner">
+                    <span class="sk-inner-circle"></span>
+                </div>
+            </section>
+        
+            <main>
+            <section class="sign-in-form section-padding">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-8 mx-auto col-12">
+
+                            <h1 class="hero-title text-center mb-5">Request Earth Imagery</h1>
+                            <div class="div-separator w-50 m-auto my-5"><span>or</span></div>
+
+                            <div class="row">
+                                <div class="col-lg-8 col-11 mx-auto">
             <form action="/earth_assets" method="post">
                 <div class="form-floating my-4">
                     <label for="latitude">Latitude:</label>
-                    <input type="text" id="latitude" name="latitude" required>
+                    <input type="text" id="latitude" name="latitude" class="form-control" placeholder="Latitude" required>
                 </div>
 
                 <div class="form-floating my-4">
                 <label for="longitude">Longitude:</label>
-                <input type="text" id="longitude" name="longitude" required>
+                <input type="text" id="longitude" name="longitude" class="form-control" placeholder="Longitude"required>
                 </div>
 
                 <div class="form-floating my-4">
                 <label for="date">Date (YYYY-MM-DD):</label>
-                <input type="text" id="date" name="date" required>
+                <input type="text" id="date" name="date" class="form-control" placeholder="Date" required>
                 </div>
         
                 <button type="submit" class="btn custom-btn form-control mt-4 mb-3">Get Earth Imagery</button>
             </form>
 
-        </main>   
+        </div>
+    </div>
+    
+</div>
+
+</div>
+</div>
+</section>  
+</main>
 
         <footer class="site-footer">
             <div class="container">

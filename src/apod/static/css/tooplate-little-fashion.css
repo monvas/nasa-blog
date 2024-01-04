@@ -293,9 +293,9 @@ strong {
   CUSTOM BUTTON & ICON              
 -----------------------------------------*/
 .custom-btn {
-  background: var(--dark-color);
+  background: #7604d3;/*var(--dark-color);*/
   border-radius: 50px;
-  color: var(--white-color);
+  color: #ffffff;/*var(--white-color);*/
   font-size: var(--copyright-text-font-size);
   text-transform: uppercase;
   padding: 16.50px 20px;
@@ -326,7 +326,7 @@ strong {
 
 .custom-btn:hover,
 .slick-slideshow .custom-btn:hover {
-  background: var(--primary-color);
+  background: #8679d9;/*var(--primary-color);*/
   color: var(--white-color);
 }
 
