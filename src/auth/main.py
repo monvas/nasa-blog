@@ -37,7 +37,7 @@ def login():
 			session['email'] = account['email']
 			msg = 'Logged in successfully !'
 			print(msg)
-			return redirect('http://0.0.0.0:8080') #return redirect(url_for('home'))
+			return redirect(url_for('home'))
 		else:
 			msg = 'Incorrect username / password !'
 	return render_template('sign-in.html', msg = msg)
@@ -68,7 +68,7 @@ def register():
 			cursor.execute('INSERT INTO accounts VALUES (NULL, % s, % s)', (password, email, ))
 			mysql.connection.commit()
 			msg = 'You have successfully registered !'
-			return redirect('http://0.0.0.0:5001/login') #(url_for('login')) 
+			return redirect(url_for('login')) 
 	elif request.method == 'POST':
 		msg = 'Please fill out the form !'
 	return render_template('sign-up.html', msg = msg)
