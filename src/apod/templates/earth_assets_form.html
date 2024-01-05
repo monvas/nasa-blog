@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>NASA APOD</title>
+        <title>NASA EARTH IMAGERY</title>
 
         <!-- CSS FILES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +22,11 @@
         <link rel="stylesheet" href="{{url_for('static', filename='css/slick.css')}}"/>
 
         <link href="{{url_for('static', filename='css/tooplate-little-fashion.css')}}" rel="stylesheet">
+
+
+
+
+
 
     </head>
     
@@ -56,13 +61,12 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" href="/apod">APOD</a>
+                                <a class="nav-link" href="/apod">APOD</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/earth_assets">Earth</a>
-                            </li>                            
-
+                                <a class="nav-link active" href="/earth_assets">Earth</a>
+                            </li>
 
                         </ul>
 
@@ -76,26 +80,60 @@
             <br><br><br><br>
 
 
-          <title class="text-white">Astronomy Picture of the Day</title>
+            <title>Earth Imagery</title>
         </head>
         <body>
-          <div class="center-container">
-            <h2 class="col-lg-6 col-12 header-info text-white">Astronomy Picture of the Day</h2>
-            <div id="apodContent" class="img">
-                {% if apod_data.media_type == 'image' %}
-                    <!-- Displaying an image -->
-                    <img src="{{ apod_data.url }}" alt="{{ apod_data.title }}">
-                {% elif apod_data.media_type == 'video' %}
-                    <!-- Displaying a YouTube video -->
-                    <iframe width="800" height="600" src="{{ apod_data.url }}" frameborder="0" allowfullscreen></iframe>
-                {% endif %}
-                <h2 class="text-primary">{{ apod_data.title }}</h2>
-                <p class="center-container">{{ apod_data.explanation }}</p>
-                <br><br><br>
-            </div>
-          </div>
+            <section class="preloader">
+                <div class="spinner">
+                    <span class="sk-inner-circle"></span>
+                </div>
+            </section>
+        
+            <main>
+            <section class="sign-in-form section-padding">
+                <div class="container">
+                    <div class="row">
 
-        </main>   
+                        <div class="col-lg-8 mx-auto col-12">
+
+                            <h1 class="hero-title text-center text-white mb-5">Request Earth Imagery</h1>
+                            <div class="div-separator w-50 m-auto my-5"><span>or</span></div>
+
+                            <div class="row">
+                                <div class="col-lg-8 col-11 mx-auto">
+            <form action="/earth_assets" method="post">
+
+                <div class="form-container">
+
+                      <div class="form-group">
+                        <label for="latitude">Latitude:</label>
+                        <input type="text" id="latitude" name="latitude" placeholder="Enter your latitude" required>
+                      </div>
+                
+                      <div class="form-group">
+                        <label for="longitude">Longitude:</label>
+                        <input type="text" id="longitude" name="longitude" placeholder="Enter your longitude" required>
+                      </div>
+                
+                      <div class="form-group">
+                        <label for="date">Date (YYYY-MM-DD):</label>
+                        <input type="text" id="date" name="date" placeholder="Enter the date" required>
+                      </div>
+
+                  </div>
+        
+                <button type="submit" class="btn custom-btn form-control mt-4 mb-3">Get Earth Imagery</button>
+            </form>
+
+        </div>
+    </div>
+    
+</div>
+
+</div>
+</div>
+</section>  
+</main>
 
         <footer class="site-footer">
             <div class="container">

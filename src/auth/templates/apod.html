@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>NASA APOD</title>
+        <title>NASA Space Blog</title>
 
         <!-- CSS FILES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,12 +16,12 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
-        <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
-        <link href="{{url_for('static', filename='css/bootstrap-icons.css')}}" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-icons.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="{{url_for('static', filename='css/slick.css')}}"/>
+        <link rel="stylesheet" href="../css/slick.css"/>
 
-        <link href="{{url_for('static', filename='css/tooplate-little-fashion.css')}}" rel="stylesheet">
+        <link href="../css/tooplate-little-fashion.css" rel="stylesheet">
 
     </head>
     
@@ -41,7 +41,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <a class="navbar-brand" href="/">
+                    <a class="navbar-brand" href="index.html">
                         <strong><span>Home</span></strong>
                     </a>
 
@@ -52,17 +52,12 @@
                     <div class="collapse navbar-collapse" id="nvbarNav">
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item">
-                                <a class="nav-link " href="/">Home</a>
+                                <a class="nav-link" href="index.html">Home</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" href="/apod">APOD</a>
+                                <a class="nav-link active" href="about.html">Story</a>
                             </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="/earth_assets">Earth</a>
-                            </li>                            
-
 
                         </ul>
 
@@ -73,36 +68,32 @@
                     </div>
                 </div>
             </nav>
-            <br><br><br><br>
+
+            <header class="site-header section-padding-img site-header-image">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12 header-info">
+                            <h1>
+                                <span class="d-block text-primary">NASA</span>
+                                <span class="d-block text-white">Space Blog</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="../images/homepage/NasaStockImage.webp" class="header-image img-fluid" alt="">
+            </header>
 
 
-          <title class="text-white">Astronomy Picture of the Day</title>
-        </head>
-        <body>
-          <div class="center-container">
-            <h2 class="col-lg-6 col-12 header-info text-white">Astronomy Picture of the Day</h2>
-            <div id="apodContent" class="img">
-                {% if apod_data.media_type == 'image' %}
-                    <!-- Displaying an image -->
-                    <img src="{{ apod_data.url }}" alt="{{ apod_data.title }}">
-                {% elif apod_data.media_type == 'video' %}
-                    <!-- Displaying a YouTube video -->
-                    <iframe width="800" height="600" src="{{ apod_data.url }}" frameborder="0" allowfullscreen></iframe>
-                {% endif %}
-                <h2 class="text-primary">{{ apod_data.title }}</h2>
-                <p class="center-container">{{ apod_data.explanation }}</p>
-                <br><br><br>
-            </div>
-          </div>
-
-        </main>   
+        </main>
 
         <footer class="site-footer">
             <div class="container">
                 <div class="row">
 
                     <div class="col-lg-3 col-10 me-auto mb-4">
-                        <h4 class="text-white mb-3"><a href="/">Home</a></h4>
+                        <h4 class="text-white mb-3"><a href="index.html">Home</a></h4>
                     </div>
 
                     <div class="col-lg-5 col-8">
@@ -136,11 +127,12 @@
 
 
         <!-- JAVASCRIPT FILES -->
-        <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
-        <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
-        <script src="{{url_for('static', filename='js/Headroom.js')}}"></script>
-        <script src="{{url_for('static', filename='js/jQuery.headroom.js')}}"></script>
-        <script src="{{url_for('static', filename='js/slick.min.js')}}"></script>
-        <script src="{{url_for('static', filename='js/custom.js')}}"></script>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/Headroom.js"></script>
+        <script src="../js/jQuery.headroom.js"></script>
+        <script src="../js/slick.min.js"></script>
+        <script src="../js/custom.js"></script>
+
     </body>
 </html>

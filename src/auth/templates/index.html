@@ -59,11 +59,6 @@
                                 <a class="nav-link active" href="/apod">APOD</a>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="/earth_assets">Earth</a>
-                            </li>                            
-
-
                         </ul>
 
                         <div class="d-none d-lg-block">
@@ -76,11 +71,11 @@
             <br><br><br><br>
 
 
-          <title class="text-white">Astronomy Picture of the Day</title>
+          <title>Astronomy Picture of the Day</title>
         </head>
         <body>
           <div class="center-container">
-            <h2 class="col-lg-6 col-12 header-info text-white">Astronomy Picture of the Day</h2>
+            <h2 class="col-lg-6 col-12 header-info">Astronomy Picture of the Day</h2>
             <div id="apodContent" class="img">
                 {% if apod_data.media_type == 'image' %}
                     <!-- Displaying an image -->
@@ -91,7 +86,6 @@
                 {% endif %}
                 <h2 class="text-primary">{{ apod_data.title }}</h2>
                 <p class="center-container">{{ apod_data.explanation }}</p>
-                <br><br><br>
             </div>
           </div>
 

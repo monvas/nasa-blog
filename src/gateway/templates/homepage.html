@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>NASA APOD</title>
+        <title>NASA Space Blog</title>
 
         <!-- CSS FILES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,63 +46,80 @@
                     </a>
 
                     <div class="d-lg-none">
-                        <a href="http://localhost:5001/register" class="bi-person custom-icon me-3"></a>
+                        <a href="/register" class="bi-person custom-icon me-3"></a>
                     </div>
 
                     <div class="collapse navbar-collapse" id="nvbarNav">
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item">
-                                <a class="nav-link " href="/">Home</a>
+                                <a class="nav-link active" href="/">Home</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" href="/apod">APOD</a>
+                                <a class="nav-link" href="/apod">APOD</a>
                             </li>
 
                             <li class="nav-item">
                                 <a class="nav-link" href="/earth_assets">Earth</a>
-                            </li>                            
-
+                            </li>
 
                         </ul>
 
                         <div class="d-none d-lg-block">
-                            <a href="http://localhost:5001/register" class="bi-person custom-icon me-3"></a>
+                            <a href="/register" class="bi-person custom-icon me-3"></a>
 
                         </div>
                     </div>
                 </div>
             </nav>
+
+            <header class="site-header section-padding-img site-header-image">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12 header-info">
+                            <h1>
+                                <span class="d-block text-primary">NASA</span>
+                                <span class="d-block text-white">Space Blog</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="{{url_for('static', filename='images/NasaStockImage.webp')}}" class="header-image img-fluid" alt="">
+            </header>
+
+
+        </main>
+            <br><br>
+            <section class="section-list">
+                <h2>
+                <span class="text-white">Explore our Services!</span>
+                
+                </h2> 
+                <br>   
+                    <ul>
+                        <!-- <li><a href="/apod">View Astronomy Picture of the Day</a></li> -->
+                        <button class="button" onclick="window.location.href='/apod'">
+                            View Astronomy Picture of the Day
+                          </button>
+                          <br><br>
+                          <div>
+                         <!-- Add other links for different services -->
+                         <button class="button" onclick="window.location.href='/earth_assets'">
+                            View Earth Imagery
+                          </button>
+                        </div>
+            
             <br><br><br><br>
-
-
-          <title class="text-white">Astronomy Picture of the Day</title>
-        </head>
-        <body>
-          <div class="center-container">
-            <h2 class="col-lg-6 col-12 header-info text-white">Astronomy Picture of the Day</h2>
-            <div id="apodContent" class="img">
-                {% if apod_data.media_type == 'image' %}
-                    <!-- Displaying an image -->
-                    <img src="{{ apod_data.url }}" alt="{{ apod_data.title }}">
-                {% elif apod_data.media_type == 'video' %}
-                    <!-- Displaying a YouTube video -->
-                    <iframe width="800" height="600" src="{{ apod_data.url }}" frameborder="0" allowfullscreen></iframe>
-                {% endif %}
-                <h2 class="text-primary">{{ apod_data.title }}</h2>
-                <p class="center-container">{{ apod_data.explanation }}</p>
-                <br><br><br>
-            </div>
-          </div>
-
-        </main>   
+            </section>    
 
         <footer class="site-footer">
             <div class="container">
                 <div class="row">
 
                     <div class="col-lg-3 col-10 me-auto mb-4">
-                        <h4 class="text-white mb-3"><a href="/">Home</a></h4>
+                        <h4 class="text-white mb-3"><a href="homepage.html">Home</a></h4>
                     </div>
 
                     <div class="col-lg-5 col-8">
