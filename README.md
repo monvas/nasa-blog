@@ -14,3 +14,7 @@ Run the following command to start the application:
 ```
 docker-compose up --build
 ```
+Alternatively, to run on Azure Kubernetes:
+```
+kubectl apply -f aks-deployment.yaml
+```
